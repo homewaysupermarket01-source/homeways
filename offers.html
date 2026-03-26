@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offers & Socials - Homeway Supermarket</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #fff8f2;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.header h1 {
+    font-size: 42px;
+    color: #0a7cff;
+}
+
+.header p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* SOCIALS */
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.social-card {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.social-card:hover {
+    transform: translateY(-10px);
+    background: #0a7cff;
+    color: white;
+}
+
+.social-card i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* GALLERY */
+.gallery {
+    padding: 50px 10%;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.poster {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.poster img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.poster:hover img {
+    transform: scale(1.1);
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 20px;
+}
+
+.overlay h3 {
+    font-size: 18px;
+}
+
+/* LIGHTBOX */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #777;
+}
+ /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 30px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 50px;
+      font-weight: bolder;
+      color: #12b8eb;
+    }
+    .logo img {
+  height: 100px;   /* controls size */
+  width: 200px;    /* keeps proportions */
+  display: block;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #f28c28;
+    }
+
+    .feedback {
+      background: #1f6b5c;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 4px;
+    }
+/* FOOTER */
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 13px;
+      background: #e0e0e0;
+      margin-top: 30px;
+    }
+
+</style>
+</head>
+<header>
+  <div class="logo">HOMEWAYS</div>
+    <div class="logo">
+    <img src="logo.png" alt="Supermarket Logo">
+  </div>
+    <nav>
+    <a href="about.html" class="index">About Us</a>
+    <a href="location.html"class="locations">Locations</a>
+    <a href="offers.html"class="offers">Offers</a>
+    <a href="career.html"class="careers">Careers</a>
+    <a href="Bakery.html"class="bakery">Bakery</a>
+     <a href="index.html" class="index">Home</a>
+    <a href="feed.html" class="feedback">Feedback</a>
+  </nav>
+  </header>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>🔥 Hot Deals & Social Vibes</h1>
+    <p>Stay connected & never miss our amazing offers!</p>
+</div>
+
+<!-- SOCIAL MEDIA -->
+<div class="socials">
+    <div class="social-card">
+        <i>📘</i>
+        <h3>Facebook</h3>
+        <p>@Homeway</p>
+        <a href="https://web.facebook.com/profile.php?id=100086496350643" target="_blank">Click</a>
+    </div>
+
+    <div class="social-card">
+        <i>📸</i>
+        <h3>Instagram</h3>
+        <p>@Homeway</p>
+         <a href="https://www.instagram.com/homeway/" target="_blank">Click</a>
+    </div>
+
+    <div class="social-card">
+        <i>🐦</i>
+        <h3>Twitter</h3>
+        <p>@Homeway</p>
+        <a href="https://twitter.com/Homeway" target="_blank">Click</a>
+    </div>
+
+    <div class="social-card">
+        <i>💬</i>
+        <h3>WhatsApp</h3>
+        <p>Order Now</p>
+        <a href="https://wa.me/0115729533" target="_blank">Click</a>
+    </div>
+
+    <div class="social-card">
+        <i>🎥</i>
+        <h3>TikTok</h3>
+        <p>@Homeway</p>
+        <a href="https://www.tiktok.com/@homeway" target="_blank">Click</a>
+    </div>
+</div>
+
+<!-- POSTER GALLERY -->
+<div class="gallery">
+    <h2>🛒 Latest Offers</h2>
+
+    <div class="grid" id="posterGrid"></div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img id="lightboxImg">
+</div>
+
+<!-- FOOTER -->
+<script>
+const posters = [
+    {
+        image: "https://images.unsplash.com/photo-1607082349566-187342175e2f",
+        title: "Weekend Mega Sale"
+    },
+    {
+        image: "4.jpg",
+        title: "Bakery Discounts"
+    },
+    {
+        image: "https://i.pinimg.com/736x/f6/dc/02/f6dc023756095a3997a1bc4b3e659aa5.jpg",
+        title: "Electronics Deals"
+    },
+    {
+        image: "https://images.unsplash.com/photo-1542838132-92c53300491e",
+        title: "Fresh Produce Offers"
+    },
+    {
+        image: "https://i.pinimg.com/736x/fb/69/79/fb697944b6d00e492d36d31bb7a7f59f.jpg",
+        title: "Back to School Deals"
+    },
+    {
+        image: "https://i.pinimg.com/736x/44/3b/f5/443bf5ba1a26588a891589e9a6e164dc.jpg",
+        title: "Daily Essentials Sale"
+    }
+];
+
+const grid = document.getElementById("posterGrid");
+
+posters.forEach(poster => {
+    const div = document.createElement("div");
+    div.className = "poster";
+
+    div.innerHTML = `
+        <img src="${poster.image}" onclick="openLightbox('${poster.image}')">
+        <div class="overlay">
+            <h3>${poster.title}</h3>
+        </div>
+    `;
+
+    grid.appendChild(div);
+});
+
+// LIGHTBOX FUNCTION
+function openLightbox(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightboxImg").src = src;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+<footer>
+  © 2026 Homeways Supermarket. All rights reserved.
+</footer>
+</body>
+</html>

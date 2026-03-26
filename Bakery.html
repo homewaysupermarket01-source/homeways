@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homeway Bakery</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #fff8f2;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.header h1 {
+    font-size: 42px;
+    color: #d35400;
+}
+
+.header p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* GRID */
+.bakery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px 10%;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #777;
+}
+ /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 30px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 50px;
+      font-weight: bolder;
+      color: #12b8eb;
+    }
+    .logo img {
+  height: 100px;   /* controls size */
+  width: 200px;    /* keeps proportions */
+  display: block;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #f28c28;
+    }
+
+    .feedback {
+      background: #1f6b5c;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 4px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 60px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      color: #f28c28;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h2 {
+      font-size: 20px;
+      color: #1f6b5c;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      line-height: 1.6;
+      color: #666;
+    }
+
+    .buttons {
+      margin-top: 25px;
+    }
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 13px;
+      background: #e0e0e0;
+      margin-top: 30px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 768px) {
+      header { padding: 20px; flex-direction: column; }
+      nav { margin-top: 10px; }
+      .hero { padding: 40px 20px; }
+      .hero-text h1 { font-size: 32px; }
+    }
+    /* PAGINATION */
+.pagination {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: #d35400;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pagination button:hover {
+    background: #a84300;
+}
+
+.pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+</style>
+</head>
+<header>
+  <div class="logo">HOMEWAYS</div>
+    <div class="logo">
+    <img src="logo.png" alt="Supermarket Logo">
+  </div>
+  <nav>
+    <a href="about.html" class="index">About Us</a>
+    <a href="location.html"class="locations">Locations</a>
+    <a href="offers.html"class="offers">Offers</a>
+    <a href="career.html"class="careers">Careers</a>
+    <a href="Bakery.html">Bakery</a>
+     <a href="index.html" class="index">Home</a>
+    <a href="feed.html" class="feedback">Feedback</a>
+  </nav>
+</header>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>🥐 Homeway Bakery</h1>
+    <p>Freshly baked happiness in every bite 😋</p>
+</div>
+
+<!-- BAKERY ITEMS -->
+<div class="bakery" id="bakeryContainer"></div>
+<div class="pagination">
+    <button onclick="prevPage()">⬅ Previous</button>
+    <button onclick="nextPage()">Next ➡</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Homeway Supermarket | Fresh • Sweet • Delicious 🍰
+</div>
+
+<script>
+const getImage = (name) =>
+  `https://pixabay.com/api/?key=YOUR_API_KEY&q=${encodeURIComponent(name + " bakery")}&image_type=photo`;
+
+const products = [
+"6 Pack Andazi",
+"American Doughnut",
+"Andazi",
+"Assorted Cookies",
+"Assorted Slices",
+"ATM Milk",
+"Avocado",
+"Banana Andazi",
+"Banana Cake 350g",
+"Banana Muffin 9 Pack",
+"Beef Samosa",
+"Birthday Cake 750g",
+"Birthday Cake Flavoured 1.5kg",
+"Birthday Cake Flavoured 1kg",
+"Birthday Cake Flavoured 2kg",
+"Birthday Cake Flavours 500g",
+"Birthday Cake Gold Toppers 2kg",
+"Birthday Cake Sponge 1kg",
+"Birthday Cake Sponge 500g",
+"Birthday Cake Sponge 2kg",
+"Birthday Cake Vanilla 1.5kg",
+"Birthday Cake Vanilla 1kg",
+"Birthday Cake Vanilla 2kg",
+"Birthday Cake Vanilla 500g",
+"Birthday Vanilla 3kg",
+"Carrot Cake Block 300g",
+"Chapati",
+"Choco Cookies Packed",
+"Choco Doughnut",
+"Chocolate Cupcake",
+"Cinnamon Roll",
+"Cocktail Mandazi 3pcs",
+"Coconut Biscuit",
+"Coconut Bread 400g",
+"Coconut Buns",
+"Coconut Crunchy",
+"Coloured Capsicum",
+"Cookies",
+"Cream Puff",
+"Croissant",
+"Cupcake",
+"Danish",
+"Deco Cookies",
+"Double Cinnamon",
+"Double Cookies",
+"Doughnut Plain",
+"English Muffins",
+"Fancy Cookies",
+"Flavour Slices",
+"Mini Heart Flavoured 200g",
+"Fruit Cake 350g",
+"Ganache",
+"Ginger Biscuit",
+"Graduation Cake",
+"Hot Dog Bun",
+"Kaimati",
+"Kebab",
+"Lamington Cake",
+"Large Muffins 9 Pack",
+"Lemon Slice 250g",
+"Lime",
+"Long Rolls 400g",
+"Macadamia Cookies",
+"Mahamri",
+"Marble Cake Block",
+"Muffins 4 Pack",
+"Muffins 6 Pack",
+"Muffins 8 Pack",
+"Ngumu",
+"Oil Muffins",
+"Oreo Muffin 6 Pack",
+"Packed Cookies",
+"Peanut Muffin 350g",
+"Queen Cake 12 Pack 400g",
+"Queen Cake 4 Pack",
+"Queen Cakes Small 6 Pack",
+"Queen Cake 5 Pack",
+"Queen Cake 8 Pack",
+"Rock Bun",
+"Rock Muffin",
+"Saghet Bunch",
+"Scones 400g",
+"Season Cake Block 350g",
+"Slab Cake",
+"Smoke Bun",
+"Smokie",
+"Soro Bunch",
+"Spinach Bunch",
+"Sponge Cake 1kg",
+"Sponge Cake Slices",
+"Steak",
+"Strawberry",
+"Sugar 1/2kg",
+"Sugar 1kg",
+"Sugar 2kg",
+"Sukuma Bunch",
+"Sweet Banana",
+"Sweet Buns 400g",
+"Sweet Cake 160g",
+"Sweet Mandazi",
+"Sweet Potato",
+"Swiss Roll",
+"Tea Cake",
+"Tea Scone Coconut",
+"Tea Scone Plain",
+"Toasted Bread",
+"Vanilla Block 350g",
+"Vanilla Block 200g",
+"Vanilla Block 500g",
+"Vanilla Block 750g",
+"Vanilla Slice",
+"Vennesse Cookies",
+"Vennesse Packed Cookies",
+"Victoria Slice",
+"Vienna 8 Pack",
+"Watermelon",
+"White Bread 1.5kg",
+"White Bread 400g",
+"White Bread 600g",
+"White Bread 800g"
+].map((item, index) => ({
+  name: item,
+  image: getImage(item),
+  desc: "Fresh and high-quality product, prepared and delivered with care."
+}));
+
+const container = document.getElementById("bakeryContainer");
+
+let currentPage = 1;
+const itemsPerPage = 6;
+
+function displayProducts() {
+    container.innerHTML = "";
+
+    let start = (currentPage - 1) * itemsPerPage;
+    let end = start + itemsPerPage;
+
+    let paginatedItems = products.slice(start, end);
+
+    paginatedItems.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "card";
+
+        div.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <div class="card-content">
+                <h3>${item.name}</h3>
+                <p>${item.desc}</p>
+            </div>
+        `;
+
+        container.appendChild(div);
+    });
+}
+
+function nextPage() {
+    if (currentPage * itemsPerPage < products.length) {
+        currentPage++;
+        displayProducts();
+    }
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        displayProducts();
+    }
+}
+
+// INITIAL LOAD
+displayProducts();
+</script>
+<footer>
+  © 2026 Homeways Supermarket. All rights reserved.
+</footer>
+</body>
+</html>

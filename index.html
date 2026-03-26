@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOMEWAY SUPERMARKET</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">HOMEWAYS</div>
+    <div class="logo">
+    <img src="logo.png" alt="Supermarket Logo">
+      </div>
+  <nav>
+    <a href="about.html" class="index">About Us</a>
+    <a href="location.html"class="locations">Locations</a>
+    <a href="offers.html"class="offers">Offers</a>
+    <a href="career.html"class="careers">Careers</a>
+    <a href="Bakery.html"class="bakery">Bakery</a>
+    <a href="index.html" class="index">Home</a>
+    <a href="feed.html" class="feedback">Feedback</a>
+    
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>HOME OF AFFORDABILTY</h1>
+    <h2>For 9+ Years Running</h2>
+    <p>
+      Shop fresh groceries, household essentials, and amazing deals all in one place. Trusted by millions across the Religion.
+    </p>
+
+   <div class="buttons">
+  <button class="btn btn-primary" onclick="window.location.href='location.html'">
+    Find a Store
+  </button>
+
+  <button class="btn btn-outline" onclick="window.location.href='offers.html'">
+    View Deals
+  </button>
+</div>
+  </div>
+
+  <div class="hero-image">
+    <img src="1.jpg" alt="Girl in a jacket">
+    <img src="2.jpg" alt="Girl in a jacket">
+    <img src="3.jpg" alt="Girl in a jacket">
+    <img src="4.jpg" alt="Girl in a jacket">
+    <img src="5.jpg" alt="Girl in a jacket">
+    <img src="6.jpg" alt="Girl in a jacket">
+    <img src="7.jpg" alt="Girl in a jacket">
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <h3>Fresh Produce</h3>
+    <p>High-quality fruits and vegetables sourced daily.</p>
+  </div>
+
+  <div class="feature">
+    <h3>Best Prices</h3>
+    <p>Affordable pricing on all your daily essentials.</p>
+  </div>
+
+  <div class="feature">
+    <h3>Convenient Locations</h3>
+    <p>Stores available Thika and Juja Subcounty.</p>
+  </div>
+
+  <div class="feature">
+    <h3>Fast Checkout</h3>
+    <p>Quick and easy shopping experience every time.</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Homeways Supermarket. All rights reserved.
+</footer>
+
+<script>
+  function findStore() {
+    alert("Opening store locator...");
+  }
+
+  function viewDeals() {
+    alert("Showing latest deals...");
+  }
+</script>
+
+</body>
+</html>
+<script>
+  const images = document.querySelectorAll(".hero-image img");
+  let index = 0;
+
+  function showImage() {
+    images.forEach(img => img.classList.remove("active"));
+    images[index].classList.add("active");
+    index = (index + 1) % images.length;
+  }
+
+  showImage();
+  setInterval(showImage, 3000);
+</script>
